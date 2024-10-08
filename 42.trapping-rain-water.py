@@ -11,22 +11,20 @@ from typing import List
 class Solution:
     def trap(self, height: List[int]) -> int:
         waterCount = 0
-        L = 0
-        R = len(height) - 1
-        maxL, maxR = 0, 0
+        L, R = 0, len(height) - 1
+        maxL = 0
+        maxR = 0
 
-        for i in range(len(height)):
-            while L < R:
-                maxL = max(height[L], maxL)
-                maxR = max(height[R], maxR)
+        while L < R:
+            maxL = max(maxL, height[L])
+            maxR = max(maxR, height[R])
 
-                if maxL <= maxR:
-                    waterCount += max(0, maxL - height[L])
-                    L += 1
-                else:
-                    waterCount += max(0, maxR - height[R])
-                    R -= 1
-
+            if maxL <= maxR:
+                waterCount += maxL - height[L]
+                L += 1
+            else:
+                waterCount += maxR - height[R]
+                R -= 1
         return waterCount
 
 
