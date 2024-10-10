@@ -10,16 +10,17 @@ from typing import List
 
 class Solution:
     def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        nums1toIdx = {n: i for i, n in enumerate(nums1)}
         res = [-1] * len(nums1)
-        nums1Idx = {n: i for i, n in enumerate(nums1)}
         stack = []
         for i in range(len(nums2)):
-            while stack and nums2[i] > stack[-1]:
+            cur = nums2[i]
+            while stack and cur > stack[-1]:
                 val = stack.pop()
-                idx = nums1Idx[val]
-                res[idx] = nums2[i]
-            if nums2[i] in nums1Idx:
-                stack.append(nums2[i])
+                idx = nums1toIdx[val]
+                res[idx] = cur
+            if cur in nums1toIdx:
+                stack.append(cur)
         return res
 
 
