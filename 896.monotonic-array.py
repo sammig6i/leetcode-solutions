@@ -18,6 +18,7 @@ class Solution:
                 increasing = False
             elif not (nums[i] >= nums[i + 1]):
                 decreasing = False
+
         return increasing or decreasing
 
 
