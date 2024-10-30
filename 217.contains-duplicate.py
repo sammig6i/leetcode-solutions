@@ -16,6 +16,6 @@ class Solution:
                 return True
             numSet.add(n)
         return False
-        
+    
 # @lc code=end
 

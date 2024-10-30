@@ -15,4 +15,5 @@ class Solution:
             res ^= n
         return res
 
+
 # @lc code=end
