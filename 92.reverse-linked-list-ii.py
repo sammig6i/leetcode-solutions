@@ -1,7 +1,7 @@
 #
-# @lc app=leetcode id=206 lang=python3
+# @lc app=leetcode id=92 lang=python3
 #
-# [206] Reverse Linked List
+# [92] Reverse Linked List II
 #
 
 # @lc code=start
@@ -16,7 +16,9 @@ class ListNode:
 
 
 class Solution:
-    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+    def reverseBetween(
+        self, head: Optional[ListNode], left: int, right: int
+    ) -> Optional[ListNode]:
         
 
 

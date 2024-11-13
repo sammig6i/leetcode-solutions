@@ -1,12 +1,14 @@
 #
-# @lc app=leetcode id=206 lang=python3
+# @lc app=leetcode id=61 lang=python3
 #
-# [206] Reverse Linked List
+# [61] Rotate List
 #
 
 # @lc code=start
 # Definition for singly-linked list.
 from typing import Optional
+
+from more_itertools import tail
 
 
 class ListNode:
@@ -16,8 +18,8 @@ class ListNode:
 
 
 class Solution:
-    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        
+    def rotateRight(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:
+      
 
 
 # @lc code=end
